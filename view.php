@@ -1,5 +1,7 @@
 <?php
 
+
+
 // Carrega configurações globais
 require("_global.php");
 
@@ -38,7 +40,7 @@ SELECT
     
     -- Obtém a idade do employee em anos
     -- Referências: https://www.w3schools.com/sql/func_mysql_timediff.asp
-    TIMESTAMPDIFF(YEAR, emp_birth, CURDATE()) as emp_age 
+    TIMESTAMPDIFF(YEAR, emp_birth, CURDATE()) AS emp_age 
 
 -- Tabela original
 FROM `article`
@@ -60,6 +62,7 @@ SQL;
 
 // Executa o SQL
 $res = $conn->query($sql);
+
 
 // Se artigo não existe redireciona para a página 404.
 if($res->num_rows == 0) header('Location: 404.php');
@@ -83,12 +86,33 @@ $article = <<<ART
 
 ART;
 
+$authorInfo = <<<ATR
+ <h2>Autor</h2>
+ <img src="{$art['emp_photo']}" alt="{$art['emp_name']}">
+  <p> {$art['emp_name']} </P>
+   <p> {$art['emp_datebr']} </p>
+
+ATR;
+
+
+// Atualiza as visualizações do artigo
+$sql = <<<SQL
+UPDATE article 
+    SET art_views = art_views + 1 
+WHERE art_id = '{$id}';
+SQL;
+$conn->query($sql);
+
 // Inclui o cabeçalho do documento
 require('_header.php');
 ?>
 
 <article><?php echo $article ?></article>
 
-<aside></aside>
+<aside>
+<?php echo $authorInfo; ?>
+</aside>
 
 <?php require('_footer.php') ?>
+
+
