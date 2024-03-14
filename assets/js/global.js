@@ -28,11 +28,11 @@ const userLabel = document.getElementById('userLabel');
 // Monitora se houve mudanças na autenticação do usuário
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        // Se alguém se logou, faça isso...
+        // Se alguém se logou, faça isso:
         // Chama a função que trata o usuário logado
         isLogged(user);
     } else {
-        // Se alguém deslogou, faça isso...
+        // Se alguém deslogou, faça isso:
         // Chama a função que trata o usuário NÃO logado
         notLogged();
     }
@@ -40,7 +40,19 @@ firebase.auth().onAuthStateChanged((user) => {
 
 // Função que trata o usuário logado
 function isLogged(user) {
-    console.log(user);
+    // Altera href do link
+    userAccess.href = `profile.php?ref=${location.href}`;
+    // Altera title do link
+    userAccess.title = `Ver perfil de ${user.displayName}`;
+    // Oculta o ícone de login
+    userIcon.style.display = 'none';
+    // Define os atributos da imagem conforme dados do usuário
+    userImg.src = user.photoURL;
+    userImg.alt = user.displayName;
+    // Mostrar a imagem do usuário
+    userImg.style.display = 'inline';
+    // Altera a label para entrar
+    userLabel.innerHTML = 'Perfil';
 }
 
 // Função que trata o usuário NÃO logado 

@@ -5,9 +5,9 @@ require("_global.php");
 
 // Configurações desta página
 $page = array(
-    "title" => "Lendo e Entendendo", // Título desta página
-    "css" => "index.css",            // Folha de estilos desta página
-    "js" => "index.js",              // JavaScript desta página
+    "title" => "Perfil de Usuário",
+    "css" => "profile.css",
+    "js" => "profile.js"
 );
 
 // Inclui o cabeçalho do documento
