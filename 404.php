@@ -15,17 +15,10 @@ require('_header.php');
 
 <article>
     <h1>Oooops! Hehe</h1>
-    <img src="assets/img/404.png" alt="Erro 404">
+    <img src="assets/img/mike.png" alt="Erro 404">
     <h3><strong> Você esta no lugar errado calabreso. </strong></h3>
-    <h3><strong>Tente isto mortandelo "loucura.com.br" </strong></h3>
+    <h3><strong>Tente isto mortandelo "onlyfans.com" </strong></h3>
 </article>
-
-<aside>
-    <?php 
-    $num_list = 2;
-    require('widgets/_mostviewed.php');
-     ?>
-</aside>
 
 <?php
 // Inclui o rodapé do documento

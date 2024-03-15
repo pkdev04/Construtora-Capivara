@@ -22,7 +22,7 @@ if (isset($page['js']))
     ?>
     <?php // Ícone de favoritos usado na guia e atalhos 
     ?>
-    <link rel="shortcut icon" href="assets/img/logo02.png">
+    <link rel="shortcut icon" href="assets/img/capibara.png">
     <?php // Título da página, gerado dinâmicamente 
     ?>
     <title>Hello Word - <?php echo $page["title"] ?></title>

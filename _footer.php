@@ -14,7 +14,7 @@
     </a>
 
 </footer>
-&nbsp;
+
 </div>
 
 <?php // Importa as bibliotecas e configuração do Firebase 
