@@ -7,6 +7,7 @@ require("_global.php");
 $page = array(
     "title" => $site['slogan'],      // Título desta página
     "css" => "index.css",            // Folha de estilos desta página
+    "js" => "index.js",              // JavaScript desta página
 );
 
 /**
@@ -113,8 +114,8 @@ while ($mv = $res->fetch_assoc()) :
 <div onclick="location.href = 'view.php?id={$mv['art_id']}'">
     <img src="{$mv['art_thumbnail']}" alt="{$mv['art_title']}">
     <div>
-    <h5>{$mv['art_title']}</h5>
-    <p><small title="{$mv['art_summary']}">{$art_summary}</small></p>
+    <h4>{$mv['art_title']}</h4>
+    <p title="{$mv['art_summary']}">{$art_summary}</p>
     </div>
 </div>
 
