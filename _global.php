@@ -27,9 +27,9 @@ mb_regex_encoding('UTF8');
  * Altere conforme suas necessidades.
  **/
 $site = [
-    "sitename" => "Capivarias",              // Usado na tag <title>
-    "title" => "Capivarias",                 // Usado na tag <header>
-    "slogan" => "Capivarando a progamação",       // Usado na tag <header>
+    "sitename" => "Construtora",              // Usado na tag <title>
+    "title" => "Construtora Capivara",                 // Usado na tag <header>
+    "slogan" => "Costruindo com progrmação",       // Usado na tag <header>
     "logo" => "capibara.png",                 // Usado na tag <header>
 
     // Dados de conexão com o MySQL:

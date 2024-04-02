@@ -89,6 +89,16 @@ if (isset($page['js']))
                 <span>Início</span>
             </a>
 
+            <a href="form.php" title="portifolio">
+            <i class="fa-solid fa-briefcase"></i>
+                <span>portifolio</span>
+            </a>
+
+            <a href="budget.php" title="Orçamentos">
+            <i class="fa-solid fa-cart-shopping"></i>
+                <span>Orçamento</span>
+            </a>
+
             <a href="contacts.php" title="Faça Contato">
                 <i class="fa-solid fa-comment fa-fw"></i>
                 <span>Contatos</span>

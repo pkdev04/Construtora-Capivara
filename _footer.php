@@ -6,7 +6,7 @@
         <i class="fa-solid fa-house fa-fw"></i>
     </a>
     <div>
-        <div>&copy; 2024 Eu Mesmo!</div>
+        <div>&copy; 2024 PKDEV, Evandro</div>
         <a href="privacy.php">Políticas de Privacidade</a>
     </div>
     <a href="#wrap">
