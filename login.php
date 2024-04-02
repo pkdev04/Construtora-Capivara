@@ -20,7 +20,7 @@ require('_header.php');
     <p>Use sua conta Google / Gmail.</p>
     <p id="loginError" class="red"></p>
     <p class="center">
-    <button type="button" id="btnLogin">
+        <button type="button" id="btnLogin">
             <i class="fa-brands fa-google fa-fw"></i>
             &nbsp; 
             Logue-se com o Google

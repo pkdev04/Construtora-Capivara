@@ -1,4 +1,4 @@
-.article, .viewed > div {
+.article {
     background-color: #eee;
     display: flex;
     flex-direction: column;
@@ -7,22 +7,18 @@
     border-radius: .3rem;
 }
 
-.article:hover, .viewed > div:hover {
+.article:hover {
     background-color: #ddd;
 }
 
-.article img, .viewed img {
+.article img {
     width: 100%;
     height: auto;
     border-radius: .35rem .35rem 0 0;
 }
 
-.article div, .viewed>div>div {
+.article div {
     padding: 0 1rem;
-}
-
-.viewed h5, .viewed p {
-    margin: .5rem 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -36,5 +32,5 @@
         height: auto;
         border-radius: .35rem 0 0 .35rem;
     }
-   
+
 }

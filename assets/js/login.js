@@ -40,7 +40,7 @@ function login() {
         .catch((error) => {
             // Se algo der errado...
             // Exibe mensagem de alerta para o usuário
-            loginError.innerHTML = "Oooops! HeHe, algo de errado não está certo, tente novamente depois.";
+            loginError.innerHTML = "Oooops! Algo deu errado. Por favor, tente mais tarde.";
             loginError.style.display = 'block';
             // Exibe o erro técnico no console do JavaScript
             console.error(error);

@@ -5,9 +5,9 @@ require("_global.php");
 
 // Configurações desta página
 $page = array(
-    "title" => "Artigo Completo", // Título desta página
-    "css" => "view.css",          // Folha de estilos desta página
-    "js" => "view.js",            // JavaScript desta página
+    "title" => "Artigo Completo",
+    "css" => "view.css",
+    "js" => "view.js"
 );
 
 // Obter o ID do artigo e armazenar na variável 'id'
@@ -67,14 +67,13 @@ if ($res->num_rows == 0) header('Location: 404.php');
 // Obtém o artigo e armazena em $art[]
 $art = $res->fetch_assoc();
 
-// debug($art);
-
 // Gera a view para o usuário
+// Atividade 3) → <small class="authordate">
 $article = <<<ART
 
 <div class="article">
     <h2>{$art['art_title']}</h2>
-    <small>Por {$art['emp_name']} em {$art['art_datebr']}.</small>
+    <small class="authordate">Por {$art['emp_name']} em {$art['art_datebr']}.</small>
     <div>{$art['art_content']}</div>
 </div>
 
@@ -125,7 +124,7 @@ $sql = <<<SQL
 -- Seleciona
 SELECT
 	-- os campos necessários
-	art_id, art_thumbnail, art_title
+	art_id, art_title, art_summary, art_views
 -- da tabela 'article'    
 FROM `article`
 -- quando
@@ -147,16 +146,41 @@ LIMIT 3;
 SQL;
 $res = $conn->query($sql);
 
-// Inicializa a view
-$aside_articles = '<div class="aside_article"><h4>+ Artigos</h4>' . "\n";
+// Atividade 2) Extrai primeiro nome do autor
+$afn = explode(' ', $art['emp_name'])[0];
+
+// Atividade 2) Inicializa a view
+$aside_articles = <<<HTML
+    <div class="aside_block">
+        <h4>+ Artigos de {$afn}</h4>    
+HTML;
 
 // Loop da view
 while ($aart = $res->fetch_assoc()) :
 
+    // Se o resumo tem mais de X caracteres
+    // Referências: https://www.w3schools.com/php/func_string_strlen.asp
+    if (strlen($aart['art_summary']) > $site['summary_length'])
+
+        // Corta o resumo para a quantidade de caracteres correta
+        // Referências: https://www.php.net/mb_substr
+        $art_summary = mb_substr(
+            $aart['art_summary'],       // String completa, a ser cortada
+            0,                          // Posição do primeiro caracter do corte
+            $site['summary_length']     // Tamanho do corte
+        ) . "...";                      // Concatena reticências no final
+
+    // Contador de visualizações
+    if ($aart['art_views'] == 0) $art_views = "Nenhuma visualização";
+    elseif ($aart['art_views'] == 1) $art_views = "1 visualização";
+    else $art_views = "{$aart['art_views']} visualizações";
+
     $aside_articles .= <<<HTML
-<div onclick="location.href='/view.php?id={$aart['art_id']}'">
-<img src="{$aart['art_thumbnail']}" alt="{$aart['art_title']}">
-<h5>{$aart['art_title']}</h5>
+
+<div onclick="location.href = 'view.php?id={$aart['art_id']}'">
+    <h5>{$aart['art_title']}</h5>
+    <small title="{$aart['art_summary']}">{$aart['art_summary']}</small>
+    <small class="footer">{$art_views}</small>
 </div>
 
 HTML;
@@ -173,7 +197,14 @@ $page['title'] = $art['art_title'];
 require('_header.php');
 ?>
 
-<article><?php echo $article ?></article>
+<article>
+    <?php
+    echo $article;
+
+    // Inclui o processamento dos comentários
+    require('widgets/_comments.php');
+    ?>
+</article>
 
 <aside>
     <?php
