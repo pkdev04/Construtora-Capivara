@@ -104,8 +104,8 @@ VALUES
         '1', 
         '2', 
         'https://picsum.photos/200',
-        'Casa',
-        'Conheça mais sobre a casa programada',
+        'Figueira donde nascem figos',
+        'Conheça e saiba cuida de figueira e comer frutos deliciosos.',
         '
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ab, excepturi, ullam veniam perspiciatis officiis nostrum libero rerum ipsum minima tempore quisquam accusamus officia magni ea accusantium cumque reiciendis molestias.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate placeat obcaecati harum doloribus perferendis mollitia autem, sapiente fuga itaque officiis molestias libero ea, delectus vero error? Amet deserunt eum vero.</p>

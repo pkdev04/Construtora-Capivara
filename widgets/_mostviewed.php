@@ -11,12 +11,12 @@ $num_list = (isset($num_list)) ? intval($num_list) : 3;
 $sql = <<<SQL
 
 SELECT 
-    art_id, art_title, art_summary
+    art_id, art_title, art_summary, art_views
 FROM article
 WHERE 
     art_status = 'on'
     AND art_date <= NOW()
-ORDER BY art_views
+ORDER BY art_views DESC
 LIMIT {$num_list};
 
 SQL;
@@ -25,46 +25,26 @@ SQL;
 $res = $conn->query($sql);
 
 // Variável acumuladora. Armazena cada um dos artigos.
-$aside_viewed = '<div class="aside_block"><h3>Artigos + vistos</h3>';
+$aside_viewed = '
+    <div class="aside_block">
+        <h3>Artigos + vistos</h3>
+';
 
 // Loop para obter cada registro
 while ($mv = $res->fetch_assoc()) :
 
-    // Cria uma variável '$art_summary' para o resumo
-    $art_summary = $mv['art_summary'];
+    // Contador de visualizações
+    if (intval($mv['art_views']) == 0) $art_views = "Nenhuma visualização";
+    elseif ($mv['art_views'] == 1) $art_views = "1 visualização";
+    else $art_views = "{$mv['art_views']} visualizações";
 
-    /**
-     * Opcional
-     * Se o resumo tem mais de X caracteres, onde X é definido em _config.php,
-     * na variável $site['summary_length'].
-     * Para usar, logo abaixo, no bloco HTML, troque:
-     *      <small title="{$mv['art_summary']}">{$mv['art_summary']}</small>
-     * por
-     *      <small title="{$mv['art_summary']}">{$art_summary}</small>
-     *                                           ^^^^^^^^^^^^   
-     * Referências: https://www.w3schools.com/php/func_string_strlen.asp
-     **/
-    if (strlen($mv['art_summary']) > $site['summary_length'])
+    $aside_viewed .= aside_box([
+        'href' => "view.php?id={$mv['art_id']}",
+        'title' => $mv['art_title'],
+        'body' => $mv['art_summary'],
+        'footer' => $art_views
+    ]);
 
-        /**
-         * Corta o resumo para a quantidade de caracteres correta
-         * Referências: https://www.php.net/mb_substr
-         **/
-        $art_summary = mb_substr(
-            $mv['art_summary'],         // String completa, a ser cortada
-            0,                          // Posição do primeiro caracter do corte
-            $site['summary_length']     // Tamanho do corte
-        ) . "...";                      // Concatena reticências no final
-
-    // Monta a view HTML
-    $aside_viewed .= <<<HTML
-
-<div onclick="location.href = 'view.php?id={$mv['art_id']}'">
-    <h5>{$mv['art_title']}</h5>
-    <small title="{$mv['art_summary']}">{$mv['art_summary']}</small>
-</div>
-
-HTML;
 endwhile;
 
 $aside_viewed .= '</div>';

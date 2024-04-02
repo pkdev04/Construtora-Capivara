@@ -171,8 +171,8 @@ while ($aart = $res->fetch_assoc()) :
         ) . "...";                      // Concatena reticências no final
 
     // Contador de visualizações
-    $art_views = "Nenhuma visualização";
-    if ($aart['art_views'] == 1) $art_views = "1 visualização";
+    if ($aart['art_views'] == 0) $art_views = "Nenhuma visualização";
+    elseif ($aart['art_views'] == 1) $art_views = "1 visualização";
     else $art_views = "{$aart['art_views']} visualizações";
 
     $aside_articles .= <<<HTML

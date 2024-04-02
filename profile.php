@@ -14,7 +14,7 @@ $page = array(
 $uid = isset($_GET['uid']) ? trim(htmlentities($_GET['uid'])) : '';
 
 // Atividade 4) Inicializa a view dos comentários do usuário na <aside>
-$user_comments = '<h3>Seus comentários</h3>';
+$user_comments = '<div class="aside_block"><h3>Seus comentários</h3>';
 
 if ($uid != '') :
 
@@ -68,6 +68,8 @@ HTML;
 
         endwhile;
 
+        $user_comments .= "</div>";
+
     else :
 
         $user_comments .= <<<HTML
@@ -94,24 +96,25 @@ require('_header.php');
 
 <article>
 
-    <h2>Eai? <span id="userName">Caga tronco</span>!</h2>
+    <h2>Olá <span id="userName">usuário</span>!</h2>
 
     <div id="userCard"></div>
 
-    <p>Mongol, você entrou pelo Google, seu perfil é là </p>
+    <p>Sua conta é gerenciada pelo Google. Clique no botão abaixo para acessar seu perfil no Google.</p>
+
     <p class="center">
         <button type="button" id="btnGoogleProfile">
             <i class="fa-brands fa-google fa-fw"></i>
-            Seu perfil
+            Acessar perfil no Google
         </button>
     </p>
 
-    <p>Pronto agora quer sair, o que eu fiz dessa vez</p>
+    <p>Clique no botão abaixo se quise sair do aplicativo.</p>
 
     <p class="center">
         <button type="button" id="btnLogout">
-        <i class="fa-solid fa-right-from-bracket fa-fw"></i>
-            Deslogar
+            <i class="fa-solid fa-right-from-bracket fa-fw"></i>
+            Logout / Sair
         </button>
     </p>
 

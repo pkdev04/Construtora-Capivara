@@ -56,8 +56,8 @@ a:hover {
     position: relative;
     width: 100%;
     height: 100%;
-    /* max-width: 1024px; */
-    min-width: 280px;
+    max-width: 1024px;
+    /* min-width: 280px; */
     /* Centraliza blocos */
     margin: auto;
     /* Sticky footer - Rodapé no finla da página */
@@ -159,6 +159,8 @@ nav a img {
     width: 2.2rem;
     border-radius: 50%;
     margin-bottom: .25rem;
+    display: block;
+    background-color: #fff;
 }
 
 /* Conteúdo principal */
@@ -237,7 +239,7 @@ Telas de 768px ou mais...
 
 @media only screen and (min-width: 768px) {
 
-
+    /* Conteúdo principal */
     main {
         flex-direction: row;
     }
@@ -247,7 +249,7 @@ Telas de 768px ou mais...
         max-width: 14rem;
     }
 
-    
+    /* Cabeçalho */
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -258,7 +260,7 @@ Telas de 768px ou mais...
         margin-right: 1.5rem;
     }
 
-} 
+}
 
 /*
 Responsividade
@@ -319,26 +321,6 @@ Telas de 425px ou mais...
     }
 }
 
-.viewed div {
-    padding: .5rem;
-    background-color: white;
-    margin-bottom: 1rem;
-    border-radius: .35rem;
-    cursor: pointer;
-}
-
-.viewed div:hover {
-    background-color: #eee;
-}
-
-.viewed h5 {
-    margin: 0;
-}
-
-.viewed p {
-    margin: .25rem 0 0 0;
-}
-
 /* Blocos com artigos na aside */
 /*
 
@@ -355,17 +337,18 @@ Telas de 425px ou mais...
 
 */
 
-.aside_block {}
-
 .aside_block div {
     background-color: #fff;
     padding: .5rem;
     border-radius: .35rem;
-    cursor: pointer;
     margin-bottom: 1rem;
 }
 
-.aside_block div:hover {
+.clicked {
+    cursor: pointer;
+}
+
+.clicked:hover {
     background-color: #eee;
 }
 
@@ -383,4 +366,67 @@ Telas de 425px ou mais...
     padding-top: .25rem;
     font-size: 70%;
     text-align: right;
+}
+
+/* Lista de ícones de redes sociais */
+
+.social-side {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+
+.social-side a {
+    border-radius: .35rem;
+}
+
+.social-side a:hover {
+    background-color: #eee;
+}
+
+.social-side i {
+    font-size: 2.5rem;
+}
+
+/*
+Responsividade
+Telas de 768px ou mais... 
+*/
+
+@media only screen and (min-width: 768px) {
+
+    /* Lista de ícones de redes sociais */
+    .social-side {
+        justify-content: space-around;
+        padding-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .social-side i {
+        font-size: 4rem;
+        padding: .25rem;
+    }
+
+}
+
+.pagination {
+    display: table;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.pagination small {
+    display: none;
+}
+
+.pagination a,
+.pagination span {
+    padding: .5rem;
+    /* border: 1px dotted grey; */
+    margin: 0 1px 0 1px;
+}
+
+.pagination span {
+    /* background-color: #ddd; */
+    color: #888;
 }

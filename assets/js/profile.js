@@ -17,9 +17,7 @@ firebase.auth().onAuthStateChanged((user) => {
         // Monitora cliques no botão de logout
         btnLogout.addEventListener('click', fbLogout);
         // Link para página com comentários
-        linkToProfile.innerHTML = `
-            <a href="profile.php?uid=${user.uid}">Clique aqui</a> para ver seus comentários.
-        `;
+        linkToProfile.innerHTML = `<a href="profile.php?uid=${user.uid}">Clique aqui</a> para ver seus comentários.`;
     } else {
         // Se alguém deslogou, faça isso:
         // Obtém o parâmetro do link da página

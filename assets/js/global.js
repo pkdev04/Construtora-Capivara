@@ -96,7 +96,6 @@ function stripTags(htmlText) {
 
 // Função que valida o preenchimento do formulário de busca
 function searchCheck() {
-    console.log("teste")
     // Sanitiza o valor do campo
     headerSearch.value = stripTags(headerSearch.value.trim());
     // Se o campo não tem valor bloqueia o envio do formulário
@@ -104,5 +103,6 @@ function searchCheck() {
         // alert('Oooops! Você não disse o que quer procurar...');
         return false;
     }
+    // Libera envio do formulário
     return true;
 }

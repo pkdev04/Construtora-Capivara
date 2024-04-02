@@ -6,7 +6,7 @@
         <i class="fa-solid fa-house fa-fw"></i>
     </a>
     <div>
-        <div>&copy; 2024 PKDEV, Evandro</div>
+        <div>&copy; 2024 Eu Mesmo!</div>
         <a href="privacy.php">Políticas de Privacidade</a>
     </div>
     <a href="#wrap">
@@ -17,7 +17,7 @@
 
 </div>
 
-<?php // Importa as bibliotecas e configuração do Firebase 
+<?php // Importa as bibliotecas do Firebase 
 ?>
 <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
@@ -27,7 +27,7 @@
 <script src="assets/js/global.js"></script>
 
 <?php
-// Importa o JavaScript específico desta página dinâmicamente
+// Tag de carga do JavaScript da página atual, gerado dinâmicamente 
 echo $_js;
 ?>
 

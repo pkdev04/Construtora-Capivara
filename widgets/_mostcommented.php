@@ -8,9 +8,6 @@
  **/ 
 $num_list = isset($num_list) ? intval($num_list) : 3;
 
-// Inicializa view
-$html_view = '';
-
 // Obtém uma lista de artigos mais comentados no site
 // Referências: https://www.w3schools.com/mysql/mysql_groupby.asp
 $sql = <<<SQL

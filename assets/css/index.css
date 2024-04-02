@@ -22,60 +22,15 @@
 }
 
 @media screen and (min-width: 768px) {
-    
-        .article {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-bottom: 1rem;
+
+    .article {
+        flex-direction: row;
     }
 
     .article img {
-         width: 10rem;
+        width: 6rem;
         height: auto;
         border-radius: .35rem 0 0 .35rem;
     }
-    
-    .article h3 {
-        margin: .5rem;
-        text-align: center;
-    }
-    
-    .article ul {
-        margin: 0 0 .5rem 0;
-        padding-left: 2rem;
-    }
-    
-    .article ul {
-        margin: 0;
-        padding: 0 0 0 1rem;
-        line-height: 1.8;
-    }
-}
-/*
-    .article {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-bottom: 1rem;
-    }
 
-    .article img {
-         width: 10rem;
-        height: auto;
-        border-radius: .35rem 0 0 .35rem; 
-    }
-
-} */
-
-
-
-
-/* Parte do exercício 1 */
-
-.commented {
-    display: block;
-    text-align: right;
-    font-size: .75rem;
-    border-top: 1px dotted grey;
 }

@@ -5,8 +5,8 @@ require("_global.php");
 
 // Configurações desta página
 $page = array(
-    "title" => "Erro 404", // Título desta página
-    "css" => "404.css",            // Folha de estilos desta página
+    "title" => "Erro 404",
+    "css" => "404.css"
 );
 
 // Inclui o cabeçalho do documento
@@ -14,11 +14,11 @@ require('_header.php');
 ?>
 
 <article>
-    <h1>Oooops! Hehe</h1>
-    <img src="assets/img/mike.png" alt="Erro 404">
-    <h3><strong> Você esta no lugar errado calabreso. </strong></h3>
-    <h3><strong>Tente isto mortandelo "onlyfans.com" </strong></h3>
-    </article>
+    <h2>Oooops!</h2>
+    <img src="assets/img/404.png" alt="Erro 404">
+    <p>O conteúdo que você está tentando acessar não existe ou está indisponível.</p>
+    <p>Use o menu de navegação para acessar alguma coisa.</p>
+</article>
 
 <aside>
     <?php

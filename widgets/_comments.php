@@ -75,19 +75,14 @@ $res = $conn->query($sql);
 // Conta o número de comentários
 $cmt_total = $res->num_rows;
 
-// Conforme o número de comentários.
-if ($cmt_total == 0)
- $view_total = "<h5>Nenhum comentário</h5> <p> Seja o(a) primerio a comentar ai pow, pra ajudar o mano</p>";
-elseif ($cmt_total == 1)
-$view_total = "<h5>comentário</h5><p><strong>comenta ai também pow</strong></p>";
-
-else
- $view_total = "<h5>{$cmt_total} comentário </h5><p><strong>comenta ai também pow</strong></p>";
-// Exibe o total de comentarios
-echo $view_total;
+// Subtítulo conforme o número de comentários.
+if ($cmt_total == 0) $view_total = '<h5>Nenhum comentário</h5>';
+elseif ($cmt_total == 1) $view_total = '<h5>1 comentário</h5>';
+else $view_total = "<h5>{$cmt_total} comentários</h5>";
 
 // Se existem comentários:
 if ($cmt_total > 0) :
+
     // Loop para iterar os comentários
     $comments_view = '';
     while ($cmt = $res->fetch_assoc()) :
@@ -110,7 +105,7 @@ HTML;
     endwhile;
 
 // Se não existem comentários
-else : 
+else :
 
     $comments_view = '<p class="center">Seja o(a) primeiro(a) a comentar.</p>';
 

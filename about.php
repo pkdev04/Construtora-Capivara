@@ -83,12 +83,12 @@ require('_header.php');
 
 <article>
 
-    <h2>Sobre a <?php echo $site['sitename'] ?></h2>
+    <h2>Sobre o <?php echo $site['sitename'] ?></h2>
     <p><em>Bem-vindo ao <?php echo $site['sitename'] ?>, seu destino definitivo para tudo relacionado ao mundo verde!</em></p>
     <p>Nosso blog é dedicado a explorar o fascinante universo das plantas e árvores, desde ornamentais até variedades frutíferas e medicinais. Nosso objetivo é ser sua principal fonte de informações sobre como plantar, cuidar e colher essas maravilhas naturais. Seja você um jardineiro experiente ou iniciante, nosso propósito é fornecer insights valiosos, dicas e técnicas para ajudá-lo a cultivar um paraíso de jardim próspero. Junte-se a nós nesta jornada verde enquanto desvendamos os segredos da horticultura e revelamos a beleza e os benefícios da natureza."</p>
 
     <h3>Nossa missão</h3>
-    <p>Com a <?php echo $site['sitename'] ?>, A missão de uma construtora contemporânea pode variar dependendo de sua visão e valores específicos, mas geralmente envolve o compromisso de fornecer soluções inovadoras e sustentáveis para atender às necessidades dos clientes e da comunidade. Isso pode incluir o desenvolvimento de projetos residenciais, comerciais e industriais que incorporam práticas de construção sustentável, como eficiência energética, uso de materiais eco-friendly e design orientado para o bem-estar dos ocupantes. Além disso, uma construtora contemporânea pode buscar promover a qualidade de vida e a inclusão social por meio de seus empreendimentos, contribuindo para o desenvolvimento sustentável das áreas em que atua.</p>
+    <p>Com o <?php echo $site['sitename'] ?>, nossa missão é inspirar uma apreciação mais profunda pelas maravilhas botânicas que nos cercam. Através de conteúdo envolvente e conselhos práticos, buscamos capacitar as pessoas a se conectarem com a natureza de maneira significativa. Se você é apaixonado por paisagismo, está em busca de aprimorar suas aventuras culinárias com produtos cultivados em casa, ou está interessado em aproveitar as propriedades curativas das plantas medicinais, nosso blog oferece uma riqueza de informações para apoiar suas buscas relacionadas às plantas.</p>
 
     <h3>Participe</h3>
     <p>Junte-se à nossa comunidade de entusiastas do verde enquanto cultivamos conhecimento, fomentamos a criatividade e semeamos as bases de um futuro mais verde e sustentável juntos.</p>
