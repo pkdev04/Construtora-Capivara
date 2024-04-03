@@ -27,9 +27,9 @@ mb_regex_encoding('UTF8');
  * Altere conforme suas necessidades.
  **/
 $site = [
-    "sitename" => "HelloWord",              // Usado na tag <title>
-    "title" => "HelloWord",                 // Usado na tag <header>
-    "slogan" => "Lendo e entendendo",       // Usado na tag <header>
+    "sitename" => "Construtora",              // Usado na tag <title>
+    "title" => "Construtora Capivara",                 // Usado na tag <header>
+    "slogan" => "Programando a Construção",       // Usado na tag <header>
     "logo" => "logo02.png",                 // Usado na tag <header>
 
     // Dados de conexão com o MySQL:
@@ -40,7 +40,7 @@ $site = [
 
     // Setup da visualização
     "summary_length" => 40,                 // Tamanho do corte do resumo 
-    "articles_perpage" => 3,                // Paginação de artigos: total de artigos por página
+    "articles_perpage" => 10,                // Paginação de artigos: total de artigos por página
 
     /**
      * Lista de redes sociais

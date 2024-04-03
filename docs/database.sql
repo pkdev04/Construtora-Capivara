@@ -75,6 +75,15 @@ CREATE TABLE contact (
     ctt_status ENUM('received', 'read', 'answered', 'deleted') DEFAULT 'received'
 );
 
+-- imagens dos imoveis
+CREATE TABLE images (
+    img_id INT PRIMARY KEY AUTO_INCREMENT,
+    img_article INT, 
+    img_link VARCHAR(255),
+    FOREIGN KEY(img_article) REFERENCES article(art_id)
+
+);
+
 -- --------------------------------------------------------------- --
 -- Insere alguns dados "fake" nas tabelas para os testes iniciais. --
 -- Dizemos "popular tabela com dados".
@@ -269,6 +278,19 @@ VALUES
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum quia distinctio iusto exercitationem qui accusantium ex ullam, excepturi illo quisquam beatae, nisi ad earum reprehenderit, maiores asperiores fuga nulla accusamus.</p>
         '
     );
+
+    -- Popular tabela images
+    INSERT INTO images
+    (
+    img_article, 
+    img_link
+
+    ) VALUES(
+    "1",
+    "https://picsum.photos/300"
+    ), ("1",
+    "https://picsum.photos/301"), ("1",
+    "https://picsum.photos/302");
 
 -- Popular tabela 'comment'.
 INSERT INTO comment 

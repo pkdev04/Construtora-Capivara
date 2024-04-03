@@ -2,9 +2,10 @@
     background-color: #eee;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin: .5rem;
     cursor: pointer;
     border-radius: .3rem;
+    max-width: 300px;
 }
 
 .article:hover {
@@ -21,7 +22,7 @@
     padding: 0 1rem;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
 
     .article {
         flex-direction: row;
@@ -33,4 +34,11 @@
         border-radius: .35rem 0 0 .35rem;
     }
 
+} */
+
+.artrow {
+display: flex;
+justify-content:center;
+align-items: start;
+flex-wrap: wrap;
 }

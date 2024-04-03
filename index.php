@@ -70,7 +70,7 @@ else :
 
     // Título
     if ($total_rows == 1) $articles = '<h2>Artigo mais recente</h2>';
-    else $articles = "<h2>Artigos mais recentes</h2>";
+    else $articles = "<h2>Artigos mais recentes</h2> <div class='artrow'>";
 
     // Loop para obter cada artigo
     while ($art = $res->fetch_assoc())
@@ -79,6 +79,8 @@ else :
         $articles .= view_article($art['art_id']);
 
 endif;
+
+$articles .="</div>";
 
 // Calcula os links de paginação
 $total_pages = Ceil($total_rows / $site['articles_perpage']);

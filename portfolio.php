@@ -6,7 +6,7 @@ require("_global.php");
 // Configurações desta página
 $page = array(
     "title" => "Lendo e Entendendo",
-    "css" => "about.css"
+    "css" => "portfolio.css"
 );
 
 // Inicializa a view de colaboradores
