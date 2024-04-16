@@ -1,0 +1,44 @@
+.article {
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    cursor: pointer;
+    border-radius: .3rem;
+    max-width: 300px;
+}
+
+.article:hover {
+    background-color: #ddd;
+}
+
+.article img {
+    width: 100%;
+    height: auto;
+    border-radius: .35rem .35rem 0 0;
+}
+
+.article div {
+    padding: 0 1rem;
+}
+
+/* @media screen and (min-width: 768px) {
+
+    .article {
+        flex-direction: row;
+    }
+
+    .article img {
+        width: 6rem;
+        height: auto;
+        border-radius: .35rem 0 0 .35rem;
+    }
+
+} */
+
+.artrow {
+display: flex;
+justify-content:center;
+align-items: start;
+flex-wrap: wrap;
+}
