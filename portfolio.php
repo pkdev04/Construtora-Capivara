@@ -83,12 +83,26 @@ require('_header.php');
 
 <article>
 
-    <h2>Sobre a <?php echo $site['sitename'] ?></h2>
-    <p><em>Bem-vindo ao <?php echo $site['sitename'] ?>, seu destino definitivo para tudo relacionado ao mundo verde!</em></p>
-    <p>Nosso blog é dedicado a explorar o fascinante universo das plantas e árvores, desde ornamentais até variedades frutíferas e medicinais. Nosso objetivo é ser sua principal fonte de informações sobre como plantar, cuidar e colher essas maravilhas naturais. Seja você um jardineiro experiente ou iniciante, nosso propósito é fornecer insights valiosos, dicas e técnicas para ajudá-lo a cultivar um paraíso de jardim próspero. Junte-se a nós nesta jornada verde enquanto desvendamos os segredos da horticultura e revelamos a beleza e os benefícios da natureza."</p>
+    <h2>Portfólio da <?php echo $site['sitename']. ' "Programando a Construção"' ?></h2>
+    <strong><p><em>Introdução:</em></p></strong>
+    <p>A Construtora <?php echo $site['sitename']. ' "Programando a Construção"' ?> é uma empresa comprometida com a excelência na construção civil. Com uma equipe de profissionais altamente qualificados e uma abordagem centrada no cliente, estamos empenhados em transformar ideias em realidade e construir espaços que inspiram e melhoram a vida das pessoas.
+</p>
 
-    <h3>Nossa missão</h3>
-    <p>Com a <?php echo $site['sitename'] ?>, A missão de uma construtora contemporânea pode variar dependendo de sua visão e valores específicos, mas geralmente envolve o compromisso de fornecer soluções inovadoras e sustentáveis para atender às necessidades dos clientes e da comunidade. Isso pode incluir o desenvolvimento de projetos residenciais, comerciais e industriais que incorporam práticas de construção sustentável, como eficiência energética, uso de materiais eco-friendly e design orientado para o bem-estar dos ocupantes. Além disso, uma construtora contemporânea pode buscar promover a qualidade de vida e a inclusão social por meio de seus empreendimentos, contribuindo para o desenvolvimento sustentável das áreas em que atua.</p>
+    <h3>Nossos Serviços</h3>
+    <p>Com a <?php echo $site['sitename'] ?> Trabalhamos com, </p>
+    <hr>
+    <ul>
+        <li><a href="view.php?id=1">Casas</a></li>
+        <li><a href="view.php?id=11">Plantas ornamentais</a></li>
+        <li><a href="view.php?id=10">Sitios Lazer</a></li>
+        <li><a href="view.php?id=9">Jardins Personalizadas Residencial</a></li>
+        <li><a href="view.php?id=8">Projeto Personalizado</a></li>
+        <li><a href="view.php?id=7">Condomínio Comercial</a></li>
+        <li><a href="index.php">Entre outros...</a></li>
+    </ul>
+    
+    <hr>
+
 
     <h3>Participe</h3>
     <p>Junte-se à nossa comunidade de entusiastas do verde enquanto cultivamos conhecimento, fomentamos a criatividade e semeamos as bases de um futuro mais verde e sustentável juntos.</p>
@@ -120,3 +134,5 @@ require('_header.php');
 // Inclui o rodapé do documento
 require('_footer.php');
 ?>
+
+

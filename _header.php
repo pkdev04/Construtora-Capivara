@@ -24,7 +24,7 @@ if (isset($page['js']))
 <head>
     <?php // Define a localização da raiz do site em relação ao servidor Web e ao domínio
     ?>
-    <base href="./">
+    <base href="/FrontEndinho/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php // Carrega folhas de stilo do tema 

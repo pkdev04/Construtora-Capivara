@@ -135,7 +135,7 @@ require('_header.php');
 
 <article>
 
-    <h2>Faça Contato</h2>
+    <h2>Faça seu Orçamento</h2>
 
     <?php
     // Se ocorreram erros, exibe a caixa de mensagem
@@ -149,8 +149,8 @@ require('_header.php');
         ?>
         <input type="hidden" name="send" value="">
 
-        <p>Preencha todos os campos do formulário para enviar um contato para a equipe do <strong><?php echo $site['sitename'] ?></strong>.</p>
-        <p class="center red"><small>Todos os campos são obrigatórios.</small></p>
+        <p>Preencha todos os campos do formulário para enviar um orçamento para a equipe do <strong><?php echo $site['sitename'] ?></strong>.</p>
+        <p class="center red"><small>Todos os campos são obrigatórios!</small></p>
 
         <p>
             <label for="name">Nome:</label>
@@ -163,13 +163,13 @@ require('_header.php');
         </p>
 
         <p>
-            <label for="subject">?</label>
-            <input type="text" name="subject" id="subject" placeholder="Sobre o que deseja escrever" value="<?php echo $form['subject'] ?>" required minlength="4">
+            <label for="subject">Interesse</label>
+            <input type="text" name="subject" id="subject" placeholder="Sobre seu interesse" value="<?php echo $form['subject'] ?>" required minlength="4">
         </p>
 
         <p>
-            <label for="message">Mensagem:</label>
-            <textarea name="message" id="message" placeholder="Escreva sua mensagem aqui" required minlength="5"><?php echo $form['message'] ?></textarea>
+            <label for="message">Proposta:</label>
+            <textarea name="message" id="message" placeholder="Faça sua proposta" required minlength="5"><?php echo $form['message'] ?></textarea>
         </p>
 
         <p>
